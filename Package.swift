@@ -21,6 +21,9 @@ let package = Package(
   products: [
     .library(name: "GoogleMapsUtils", targets: ["GoogleMapsUtils"])
   ],
+    dependencies: [
+       .package(url: "https://github.com/googlemaps/ios-maps-sdk.git", from: "9.0.0")
+       ],
   targets: [
     .binaryTarget(
       name: "GoogleMapsUtils",
@@ -29,3 +32,16 @@ let package = Package(
     )
   ]
 )
+
+//let package = Package(
+//  name: "GoogleMapsUtils",
+//  products: [
+//    .library(name: "GoogleMapsUtils", targets: ["GoogleMapsUtils"])
+//  ],
+//  dependencies: [
+//     .package(url: "https://github.com/googlemaps/ios-maps-sdk.git", from: "9.0.0")
+//     ],
+//  targets: [
+//    .target(name: "GoogleMapsUtils", path: "./")
+//  ]
+//)
